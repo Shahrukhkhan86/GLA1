@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,8 +23,17 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Shahrukh khan", Snackbar.LENGTH_LONG)
-                        .setAction("OK", null).show();
+                Snackbar.make(view, "Shahrukh khan", Snackbar.LENGTH_LONG )
+                        .setAction("UNDO", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+
+                                Toast.makeText(MainActivity.this, "message", Toast.LENGTH_SHORT).show();
+
+
+                            }
+                        }).show();
             }
         });
     }
