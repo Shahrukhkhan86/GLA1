@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Shahrukh khan", Snackbar.LENGTH_LONG)
-                        .setAction("action", null).show();
+                        .setAction("OK", null).show();
             }
         });
     }
